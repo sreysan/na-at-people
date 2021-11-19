@@ -1,0 +1,6 @@
+framework module Pods_Na_atPeopleTests {
+  umbrella header "Pods-Na-atPeopleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

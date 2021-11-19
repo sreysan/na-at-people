@@ -16,10 +16,32 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.252458349142-l96autpekba2afouf8fr30lq4e57m1lg</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nunito Sans BoldItalic.ttf</string>
+		<string>Nunito Sans Regular.ttf</string>
+		<string>Nunito Sans SemiBoldItalic.ttf</string>
+		<string>Proxima Nova LightItalic.otf</string>
+		<string>Proxima Nova RegularItalic.otf</string>
+		<string>Proxima Nova SemiboldItalic.otf</string>
+		<string>Europa Regular.ttf</string>
+		<string>Europa Bold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
