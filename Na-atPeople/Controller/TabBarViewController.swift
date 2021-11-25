@@ -8,6 +8,7 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
+	var loginViewController: LoginViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()

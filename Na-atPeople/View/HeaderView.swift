@@ -20,6 +20,8 @@ class HeaderView: UIView {
 	
 	var delegate: HeaderProtocol?
 	
+	var option: Int?
+	
 	
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
@@ -95,9 +97,11 @@ class HeaderView: UIView {
 	}
 	
 	@IBAction func pressSignOut(_ sender: Any) {
-		delegate?.goToLoginViewController()
+		delegate?.goToLoginViewController(option: 0)
 	}
+	
 }
+
 protocol HeaderProtocol {
-	func goToLoginViewController()
+	func goToLoginViewController(option: Int)
 }

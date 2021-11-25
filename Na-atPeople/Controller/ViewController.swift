@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         self.setupLabels()
         self.setupImages()
         self.setupButtons()
+		self.setUpModal()
     }
     
     func setupLabels() {
@@ -69,21 +70,69 @@ class LoginViewController: UIViewController {
 				let customViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
 				self.navigationController?.pushViewController(customViewController, animated: true)
 			}else{
-				self.showAlert()
+				self.setUpModal()
 			}
 		})
 	}
 	
-	func showAlert() {
-
-		let alert = UIAlertController(title: "Únete con tu cuenta NA-AT", message: "El acceso a la aplicación, solo esta disponible para talento NAAT Ingresa con tu correo @na-at.com.mx", preferredStyle: .alert)
-
-				
-		alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-				// show the alert
-		self.present(alert, animated: true, completion: nil)
+	func setUpModal(){
+		
+		let baner = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
+		baner.backgroundColor = UIColor(white: 0, alpha: 0.4)
+		
+		let card = UIView(frame: CGRect(x: 0, y: 0, width: 286, height: 300))
+		card.layer.cornerRadius = 10
+		
+		let imClose = UIImage(named: "cerrar (1)")
+		let button = UIButton(frame: CGRect(x: 255, y: 10, width: 20, height: 20))
+		button.setImage(imClose, for: .normal)
+		  button.backgroundColor = .none
+		button.imageView?.image = UIImage(named: "cerrar (1)")
+		
+		button.addTarget(self, action: #selector(closeDialog(_:)), for: .touchUpInside)
+		
+		let ivLogo = UIImageView(image: UIImage(named: "Nsquare (1)"))
+		ivLogo.frame = CGRect(x: 113, y: 65, width: 60, height: 60)
+		
+		let lbtitle = UILabel(frame: CGRect(x: 53, y: 136, width: 286-53, height: 18))
+		lbtitle.text = "Únete con tu cuenta NA-AT"
+		lbtitle.font = UIFont.init(name: FontsConstants.EUROPA_REGULAR, size: 15)
+		
+		
+		
+		let lbContent = UILabel(frame: CGRect(x: 25, y: 183, width: 236, height: 54))
+		lbContent.lineBreakMode = .byWordWrapping
+		lbContent.textAlignment = .center
+		lbContent.numberOfLines = 0
+		lbContent.text = "El acceso a la aplicación, solo esta disponible para talento NAAT Ingresa con tu correo @na-at.com.mx"
+		lbContent.font = UIFont.init(name: FontsConstants.NUNITO_SANS_REGULAR, size: 13)
+		
+		
+		//ivClose.translatesAutoresizingMaskIntoConstraints = false
+		card.addSubview(lbContent)
+		card.addSubview(lbtitle)
+		card.addSubview(ivLogo)
+		//card.addSubview(ivClose)
+		card.addSubview(button)
+		
+		card.translatesAutoresizingMaskIntoConstraints = false
+		card.backgroundColor = .white
+		baner.tag = 100
+		baner.addSubview(card)
+		view.addSubview(baner)
+		
+		
+		card.center = baner.convert(baner.center, from:baner.superview)
+	}
+	
+	@objc func closeDialog(_ sender: UITapGestureRecognizer){
+		if let viewWithTag = self.view.viewWithTag(100) {
+				viewWithTag.removeFromSuperview()
+			}else{
+				print("No!")
+			}
 		
 	}
+	
 }
 

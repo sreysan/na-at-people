@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewDetailViewController: UIViewController {
+class NewDetailViewController: CommonViewController {
 
 	@IBOutlet weak var header: HeaderView!
 	@IBOutlet weak var imageNewDetail: UIImageView!
@@ -20,7 +20,8 @@ class NewDetailViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+		header.delegate = self
+		header.option = 1
         setupLabels()
 		fetchNews()
     }
@@ -54,5 +55,9 @@ class NewDetailViewController: UIViewController {
 				print("ERROR AL OBTENER DATOS: ", err)
 			}
 		})
+	}
+	
+	@IBAction func goToBack(_ sender: Any) {
+		super.goToBack()
 	}
 }

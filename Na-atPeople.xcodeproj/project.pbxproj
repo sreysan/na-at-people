@@ -28,6 +28,7 @@
 		4815A815273BBF2300452D7D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4815A814273BBF2300452D7D /* HeaderView.xib */; };
 		4815A817273BBF5E00452D7D /* SecondHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4815A816273BBF5E00452D7D /* SecondHeaderView.swift */; };
 		4815A819273BBF6C00452D7D /* SecondHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4815A818273BBF6C00452D7D /* SecondHeaderView.xib */; };
+		482D7BB3275041E0006507C2 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D7BB2275041E0006507C2 /* CommonViewController.swift */; };
 		483CDDAA273D07C7008C105F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 483CDDA9273D07C7008C105F /* GoogleService-Info.plist */; };
 		483D955B273DA1CB0070B1B7 /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483D955A273DA1CB0070B1B7 /* NewDetailViewController.swift */; };
 		488C8631273ADF4B007F0FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8630273ADF4B007F0FE7 /* AppDelegate.swift */; };
@@ -87,6 +88,7 @@
 		4815A814273BBF2300452D7D /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		4815A816273BBF5E00452D7D /* SecondHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondHeaderView.swift; sourceTree = "<group>"; };
 		4815A818273BBF6C00452D7D /* SecondHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondHeaderView.xib; sourceTree = "<group>"; };
+		482D7BB2275041E0006507C2 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		483CDDA9273D07C7008C105F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		483D955A273DA1CB0070B1B7 /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
 		488C862D273ADF4B007F0FE7 /* Na-atPeople.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Na-atPeople.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +199,7 @@
 				4815A80B273BB41C00452D7D /* ActivityViewController.swift */,
 				48DDE960273C39D00027CBCB /* TabBarViewController.swift */,
 				483D955A273DA1CB0070B1B7 /* NewDetailViewController.swift */,
+				482D7BB2275041E0006507C2 /* CommonViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				4815A813273BBF0B00452D7D /* HeaderView.swift in Sources */,
 				488C8635273ADF4B007F0FE7 /* ViewController.swift in Sources */,
 				4815A80A273BB40600452D7D /* NotificationViewController.swift in Sources */,
+				482D7BB3275041E0006507C2 /* CommonViewController.swift in Sources */,
 				488C8631273ADF4B007F0FE7 /* AppDelegate.swift in Sources */,
 				4815A80C273BB41C00452D7D /* ActivityViewController.swift in Sources */,
 				488C8633273ADF4B007F0FE7 /* SceneDelegate.swift in Sources */,
