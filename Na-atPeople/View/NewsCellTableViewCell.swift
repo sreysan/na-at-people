@@ -16,6 +16,8 @@ class NewsCellTableViewCell: UITableViewCell {
 	@IBOutlet weak var labelResumeNew: UILabel!
 	@IBOutlet weak var buttonDetail: UIButton!
 	
+	@IBOutlet weak var viewShadow: UIView!
+	
 	var stateButton = false
 	var delegate: Detail?
 	var index: Int!
@@ -26,6 +28,7 @@ class NewsCellTableViewCell: UITableViewCell {
         
 		setupLabels()
 		setupButtons()
+		setupCells()
     }
 	
 	private func setupLabels() {
@@ -42,6 +45,20 @@ class NewsCellTableViewCell: UITableViewCell {
 		buttonDetail.setTitle(StringsConstants.BUTTON_NEW_DETAIL, for: .normal)
 		buttonDetail.titleLabel?.font = UIFont(name: FontsConstants.NUNITO_SANS_SEMIBOLD, size: 14)
 		buttonDetail.titleLabel?.tintColor = UIColor(named: ColorsConstants.COLOR_SALMON)
+	}
+	
+	private func setupCells() {
+		viewShadow.layer.borderWidth = 1
+		viewShadow.layer.borderColor = CGColor(gray: 0.5, alpha: 0.5)
+		viewShadow.layer.shadowColor = UIColor.black.cgColor
+		viewShadow.layer.shadowOpacity = 0.3
+		viewShadow.layer.shadowOffset = .zero
+		viewShadow.layer.shadowRadius = 3
+		viewShadow.layer.cornerRadius = 4
+		
+		//viewShadow.layer.shadowPath = UIBezierPath(rect: viewShadow.bounds).cgPath
+		viewShadow.layer.shouldRasterize = true
+		viewShadow.layer.rasterizationScale = UIScreen.main.scale
 	}
 
     override func setSelected(_ selected: Bool, animated: Bool) {
