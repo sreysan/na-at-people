@@ -8,7 +8,7 @@
 import UIKit
 
 
-class HomeViewController: UIViewController, UISearchBarDelegate {
+class HomeViewController: CommonViewController, UISearchBarDelegate {
 
 	@IBOutlet weak var header: HeaderView!
 	@IBOutlet weak var searchNews: UISearchBar!
@@ -20,6 +20,8 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		header.delegate = self
+		header.option = 1
 		fetchNews()
 		setupTable()
 		setupSearch()

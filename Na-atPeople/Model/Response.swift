@@ -94,3 +94,7 @@ struct Activity: Codable {
 }
 
 //
+struct HeaderDays: Codable {
+	var Date: String
+	var Days: Int
+}

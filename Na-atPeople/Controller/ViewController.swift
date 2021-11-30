@@ -8,7 +8,7 @@
 import UIKit
 import GoogleSignIn
 
-class LoginViewController: UIViewController {
+class LoginViewController: CommonViewController {
 
 	var gidConfiguration: GIDConfiguration?
 	
@@ -69,6 +69,10 @@ class LoginViewController: UIViewController {
 				let storyboard = UIStoryboard(name: "Main", bundle: nil)
 				let customViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
 				self.navigationController?.pushViewController(customViewController, animated: true)
+				let userImage = (user.profile?.imageURL(withDimension: 30))?.absoluteString
+				let userName = user.profile?.name
+				UserDefaults.standard.setValue(userImage, forKey: "userImage")
+				UserDefaults.standard.setValue(userName, forKey: "userName")
 			}else{
 				self.setUpModal()
 			}

@@ -22,6 +22,8 @@ class HeaderView: UIView {
 	
 	var option: Int?
 	
+	let userName: String? = UserDefaults.standard.string(forKey: "userName")
+	let userImage: String? = UserDefaults.standard.string(forKey: "userImage")
 	
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
@@ -40,7 +42,10 @@ class HeaderView: UIView {
 	}
 	
 	private func setupLabels() {
-		labelUser.text = StringsConstants.LABEL_HELLO_HOME
+		let chararacterSet = CharacterSet.whitespacesAndNewlines.union(.punctuationCharacters)
+		let components = userName?.components(separatedBy: chararacterSet)
+		//labelUser.text = StringsConstants.LABEL_HELLO_HOME
+		labelUser.text = "Hola, \(components?[0] ?? "") \(components?[1] ?? "")"
 		labelUser.font = UIFont(name: FontsConstants.EUROPA_BOLD, size: 22)
 		labelUser.textColor = UIColor(named: ColorsConstants.COLOR_WHITE)
 		labelButtonSignOut.text = StringsConstants.BUTTON_SIGN_OUT
@@ -53,8 +58,8 @@ class HeaderView: UIView {
 		buttonSignOut.setTitle("", for: .normal)
 	}
 	
-	private func setupImageView(imageName: String = "foto") {
-		imageProfile.image = UIImage(named: imageName)
+	private func setupImageView() {
+		imageProfile.downloaded(from: userImage ?? "")
 		imageProfile.layer.cornerRadius = imageProfile.bounds.height / 2
 		imageButtonSignOut.image = UIImage(named: "cerrar-sesion (1)")
 		labelButtonSignOut.sizeToFit()
@@ -105,3 +110,26 @@ class HeaderView: UIView {
 protocol HeaderProtocol {
 	func goToLoginViewController(option: Int)
 }
+
+extension UIImageView {
+	func download(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+		contentMode = mode
+		URLSession.shared.dataTask(with: url) { data, response, error in
+			guard
+				let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+				let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+				let data = data, error == nil,
+				let image = UIImage(data: data)
+				else { return }
+			DispatchQueue.main.async() { [weak self] in
+				self?.image = image
+			}
+		}.resume()
+	}
+	func download(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+		guard let url = URL(string: link) else { return }
+		downloaded(from: url, contentMode: mode)
+	}
+}
+
+

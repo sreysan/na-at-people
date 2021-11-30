@@ -239,6 +239,7 @@ class Service: NSObject {
 			return
 		}
 		
+		
 		let urlSession = URLSession.shared.dataTask(with: url, completionHandler:{
 			data, response, error in
 			
@@ -247,15 +248,16 @@ class Service: NSObject {
 				return
 			}
 			
-			guard let data = data else {
+			guard let data = data
+			else {
 				return
 			}
 			
-			print(String(data: data, encoding: .utf8) ?? "")
+			//print(String(data: data, encoding: .utf8) ?? "")
 			
 			do {
-				
-			 let decodedData = try JSONDecoder().decode([ActivityRecordsListResponse].self, from: data)
+				let decodedData = try JSONDecoder().decode([ActivityRecordsListResponse].self, from: data)
+				print(decodedData)
 				completion(.success(decodedData))
 			}
 			catch {

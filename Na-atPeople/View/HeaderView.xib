@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ydf-g2-uQi">
-                    <rect key="frame" x="20" y="68" width="308" height="52"/>
+                    <rect key="frame" x="20" y="68" width="322" height="52"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvb-PY-3gt">
-                            <rect key="frame" x="0.0" y="0.0" width="308" height="26"/>
+                            <rect key="frame" x="0.0" y="0.0" width="322" height="26"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26" id="vh6-0Y-Agh"/>
                             </constraints>
@@ -37,7 +37,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxQ-iU-cYW">
-                            <rect key="frame" x="0.0" y="26" width="308" height="26"/>
+                            <rect key="frame" x="0.0" y="26" width="322" height="26"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ri-BH-nIH">
                                     <rect key="frame" x="0.0" y="5.5" width="15" height="15"/>
@@ -90,8 +90,8 @@
                         <constraint firstItem="Pvb-PY-3gt" firstAttribute="leading" secondItem="ydf-g2-uQi" secondAttribute="leading" id="te3-uX-1tm"/>
                     </constraints>
                 </stackView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="20F-cn-ZZR">
-                    <rect key="frame" x="338" y="71" width="60" height="46"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20F-cn-ZZR">
+                    <rect key="frame" x="338" y="71" width="46" height="46"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="4FD-9J-bIe"/>
                         <constraint firstAttribute="width" constant="46" id="mmD-cV-AB4"/>
@@ -101,7 +101,6 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ydf-g2-uQi" secondAttribute="trailing" constant="86" id="2DH-eF-yuN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="20F-cn-ZZR" secondAttribute="trailing" constant="16" id="J4I-f6-1dg"/>
                 <constraint firstItem="ydf-g2-uQi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="TDW-tK-tCo"/>
                 <constraint firstItem="20F-cn-ZZR" firstAttribute="leading" secondItem="ydf-g2-uQi" secondAttribute="trailing" constant="10" id="cIy-Hn-QKg"/>

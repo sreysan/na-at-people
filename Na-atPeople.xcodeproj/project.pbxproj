@@ -31,6 +31,7 @@
 		482D7BB3275041E0006507C2 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D7BB2275041E0006507C2 /* CommonViewController.swift */; };
 		483CDDAA273D07C7008C105F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 483CDDA9273D07C7008C105F /* GoogleService-Info.plist */; };
 		483D955B273DA1CB0070B1B7 /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483D955A273DA1CB0070B1B7 /* NewDetailViewController.swift */; };
+		484B361F2756838800539139 /* ActivityRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484B361E2756838800539139 /* ActivityRecordViewController.swift */; };
 		488C8631273ADF4B007F0FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8630273ADF4B007F0FE7 /* AppDelegate.swift */; };
 		488C8633273ADF4B007F0FE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8632273ADF4B007F0FE7 /* SceneDelegate.swift */; };
 		488C8635273ADF4B007F0FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C8634273ADF4B007F0FE7 /* ViewController.swift */; };
@@ -91,6 +92,7 @@
 		482D7BB2275041E0006507C2 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		483CDDA9273D07C7008C105F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		483D955A273DA1CB0070B1B7 /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
+		484B361E2756838800539139 /* ActivityRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecordViewController.swift; sourceTree = "<group>"; };
 		488C862D273ADF4B007F0FE7 /* Na-atPeople.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Na-atPeople.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		488C8630273ADF4B007F0FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		488C8632273ADF4B007F0FE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				48DDE960273C39D00027CBCB /* TabBarViewController.swift */,
 				483D955A273DA1CB0070B1B7 /* NewDetailViewController.swift */,
 				482D7BB2275041E0006507C2 /* CommonViewController.swift */,
+				484B361E2756838800539139 /* ActivityRecordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				488C8635273ADF4B007F0FE7 /* ViewController.swift in Sources */,
 				4815A80A273BB40600452D7D /* NotificationViewController.swift in Sources */,
 				482D7BB3275041E0006507C2 /* CommonViewController.swift in Sources */,
+				484B361F2756838800539139 /* ActivityRecordViewController.swift in Sources */,
 				488C8631273ADF4B007F0FE7 /* AppDelegate.swift in Sources */,
 				4815A80C273BB41C00452D7D /* ActivityViewController.swift in Sources */,
 				488C8633273ADF4B007F0FE7 /* SceneDelegate.swift in Sources */,
